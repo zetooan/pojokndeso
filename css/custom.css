@@ -1,5 +1,5 @@
 .bg-biru-1{
-	background-color: #084298;
+	background-color: #1066e6;
 	}
 .height-corousel{
 	overflow: hidden;
@@ -7,11 +7,16 @@
 }
 .jumbotron{
 	padding: 3rem 0rem 0rem 0rem;
-	background-color: #cdcfd2;
 }
 .cap-fosi{
 	font-size:1rem!important;
 }
+.tinggi-gambar{
+	max-height: 150px;
+}
+
+
+
 @media screen and (max-width: 750px){
 	.height-corousel{
 		overflow: hidden;
@@ -43,14 +48,8 @@
 	}
 	
 }
-@media screen and (max-width: 250px){
-	.height-corousel{
-		overflow: hidden;
-		height: 100px;
+@media screen and (max-width: 260px){
+	.jumbotron{
+		display: none;
 	}
-	.cap-fosi p{
-		font-size:1rem!important;
-	}
-
-
-	}
+}
