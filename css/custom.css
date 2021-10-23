@@ -1,0 +1,56 @@
+.bg-biru-1{
+	background-color: #084298;
+	}
+.height-corousel{
+	overflow: hidden;
+	height: 400px;
+}
+.jumbotron{
+	padding: 3rem 0rem 0rem 0rem;
+	background-color: #cdcfd2;
+}
+.cap-fosi{
+	font-size:1rem!important;
+}
+@media screen and (max-width: 750px){
+	.height-corousel{
+		overflow: hidden;
+		height: 300px;
+	}
+	.cap-fosi{
+		font-size:0.80rem!important;
+	}
+}
+@media screen and (max-width: 550px){
+	.height-corousel{
+		overflow: hidden;
+		height: 230px;
+	}
+	.cap-fosi{
+		font-size:0.75rem!important;
+	}
+}
+@media screen and (max-width: 400px){
+	.height-corousel{
+		overflow: hidden;
+		height: 150px;
+	}
+	.cap-fosi h3{
+		font-size:1rem!important;
+	}
+	.cap-fosi p{
+		font-size:0.5rem!important;
+	}
+	
+}
+@media screen and (max-width: 250px){
+	.height-corousel{
+		overflow: hidden;
+		height: 100px;
+	}
+	.cap-fosi p{
+		font-size:1rem!important;
+	}
+
+
+	}
