@@ -106,11 +106,6 @@
 	}
 	
 }
-@media screen and (max-width: 260px){
-	.jumbotron{
-		display: none;
-	}
-}
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);
