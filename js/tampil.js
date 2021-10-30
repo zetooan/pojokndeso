@@ -1,4 +1,8 @@
-$(document).ready(function() {
+
+var paooo = window.location.pathname; // Returns path only (/path/example.html)
+var urloo      = window.location.href;     // Returns full URL (https://example.com/path/example.html)
+var orioo   = window.location.origin;   // Returns base URL (https://example.com)   
+$(document).ready(function() { 	
 //Slide Beranda
 	function buttonSlideBeranda(hit){
 			hit--; 
@@ -26,11 +30,11 @@ $(document).ready(function() {
 //End Slide Beranda
 //Berita Terkini
 	function beritaTerkini(hit){
-		var berita = '<div class="col-md-6 mb-3"><div class="card"><div class="row"><div class="col-6"><img src="'+data_wisata.photo[hit]+'" class="card-img-top" alt="Berita Terkini '+hit+'"></div><div class="col-6"><div class="card-body"><p class="card-text">'+data_wisata.deskripsi[hit]+'</p></div></div></div></div></div>';
-		var i = 1;
+		var berita ='';
+		var i = 0;
 		while(hit >= i){
-			hit--;
 			berita += '<div class="col-md-6 mb-3"><div class="card"><div class="row"><div class="col-6"><img src="'+data_wisata.photo[hit]+'" class="card-img-top" alt="Berita Terkini '+hit+'"></div><div class="col-6"><div class="card-body"><p class="card-text">'+data_wisata.deskripsi[hit]+'</p></div></div></div></div></div>';
+			hit--;
 		}
 		$('#tampilBeritaTerkini').html(berita);
 	}
@@ -38,14 +42,25 @@ $(document).ready(function() {
 //End Berita Terkini
 //Wisata Popupler
 	function wisataPopuler(hit){
-		var wisataPopuler = '<div class="col-md-6 mb-3"><div class="card"><div class="row"><div class="col-6"><img src="'+data_wisata.photo[hit]+'" class="card-img-top" alt="Berita Terkini '+hit+'"></div><div class="col-6"><div class="card-body"><p class="card-text">'+data_wisata.deskripsi[hit]+'</p></div></div></div></div></div>';
-		var i = 1;
+		var wisataPopuler = '';
+		var i = 0;
 		while(hit >= i){
-			hit--;
 			wisataPopuler += '<div class="col-md-6 mb-3"><div class="card"><div class="row"><div class="col-6"><img src="'+data_wisata.photo[hit]+'" class="card-img-top" alt="Berita Terkini '+hit+'"></div><div class="col-6"><div class="card-body"><p class="card-text">'+data_wisata.deskripsi[hit]+'</p></div></div></div></div></div>';
+			hit--;
 		}
 		$('#tampilWisataPopuler').html(wisataPopuler);
 	}
 	wisataPopuler(hit);
 //End Wisata Popupler
+
+
+const Http = new XMLHttpRequest();
+const url='https://jsonplaceholder.typicode.com/posts';
+Http.open("GET", url);
+Http.send();
+Http.onreadystatechange=(e)=>{
+    if(this.readyState==4 && this.status== 200) {
+        console.log(Http.responseText)
+    }
+}
 });
